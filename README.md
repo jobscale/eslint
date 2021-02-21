@@ -1,4 +1,4 @@
-# ESLint with Docker image
+# ESLint with Docker container
 
 ## Example
 
