@@ -19,7 +19,20 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
       run: |
+        cat /etc/*release
+        grep MH /proc/cpuinfo
+        free -h
+        curl https://inet-ip.info/ip
         npm i
-        $(npm bin)/eslint --version
+        npm run build --if-present
+        npm test
+        IMAGE=my-image-name:$(date +%s)
+        docker build . --file Dockerfile --tag $IMAGE
+        docker run --rm -i $IMAGE --help
+        docker run --rm -i $IMAGE
       env:
         CI: true
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
