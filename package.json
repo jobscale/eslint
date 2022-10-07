@@ -2,16 +2,15 @@
   "name": "eslint-container",
   "version": "1.0.0",
   "description": "eslint on container",
-  "main": "index.js",
+  "license": "MIT",
+  "main": "app/index.js",
   "scripts": {
     "test": "npm run lint .",
     "lint": "eslint"
   },
   "dependencies": {
-    "eslint": "^8.19.0",
+    "eslint": "^8.24.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "node-fetch": "^2.6.7"
-  },
-  "license": "MIT"
+    "eslint-plugin-import": "^2.26.0"
+  }
 }

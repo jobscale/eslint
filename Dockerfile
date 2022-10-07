@@ -1,9 +1,8 @@
-FROM node
+FROM node:lts-buster-slim
 SHELL ["bash", "-c"]
 WORKDIR /home/node
-COPY . .
-RUN chown -R node. .
 USER node
-RUN npm i --production
+COPY --chown=node:staff . .
+RUN npm i --omit=dev
 ENTRYPOINT ["node_modules/.bin/eslint"]
 CMD ["--version"]

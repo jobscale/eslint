@@ -5,11 +5,11 @@
 ### lint
 
 ```
-docker run --rm -v $(pwd):/home/node/app -it jobscale/eslint app
+docker run --rm -v $(pwd)/app:/home/node/app -it jobscale/eslint app
 ```
 
 ### lint fix
 
 ```
-docker run --rm -v $(pwd):/home/node/app -it jobscale/eslint --fix app
+docker run --rm -v $(pwd)/app:/home/node/app -it jobscale/eslint --fix app
 ```

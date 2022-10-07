@@ -1,6 +1,7 @@
 .env.js
 .idea/
 .c9/
+.vscode/
 package-lock.json
 node_modules/
 app/env.js
