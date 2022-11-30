@@ -5,8 +5,8 @@
   "license": "MIT",
   "main": "app/index.js",
   "scripts": {
-    "test": "npm run lint .",
-    "lint": "eslint"
+    "lint": "eslint . --fix",
+    "test": "npm run lint"
   },
   "dependencies": {
     "eslint": "^8.26.0",
