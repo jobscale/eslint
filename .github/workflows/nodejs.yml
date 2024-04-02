@@ -1,4 +1,4 @@
-name: Node CI
+name: Nodejs CI
 
 on: [push]
 
@@ -25,6 +25,7 @@ jobs:
         curl https://inet-ip.info/ip
         npm i
         npm run build --if-present
+        npm run lint --if-present
         npm test
         IMAGE=my-image-name:$(date +%s)
         docker build . --file Dockerfile --tag $IMAGE
