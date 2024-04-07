@@ -1,10 +1,11 @@
-FROM node:lts-bullseye-slim
+FROM node:lts-bookworm-slim
 SHELL ["bash", "-c"]
 WORKDIR /home/node
 USER node
 COPY --chown=node:staff package.json .
 RUN npm i --omit=dev
-COPY --chown=node:staff .eslintrc.js .
+COPY --chown=node:staff eslint.config.mjs .
+COPY --chown=node:staff rules rules
+COPY --chown=node:staff index.js .
 COPY --chown=node:staff app app
-ENTRYPOINT ["node_modules/.bin/eslint"]
-CMD ["."]
+CMD ["npm", "run", "lint"]

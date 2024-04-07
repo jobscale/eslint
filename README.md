@@ -1,13 +1,15 @@
 # ESLint with Docker container
 
-## Example
+## ESLint v9
+
+## Examples
 
 ### lint
 
 ```
 {
   docker build . -t jobscale/eslint \
-  && docker run --rm -v $(pwd)/app:/home/node/app -it jobscale/eslint
+  && docker run --rm -v $(pwd):/home/node/task -it jobscale/eslint
 }
 ```
 
@@ -16,7 +18,6 @@
 ```
 {
   docker build . -t jobscale/eslint \
-  && docker run --rm -v $(pwd)/app:/home/node/app -it jobscale/eslint --fix
-
+  && docker run --rm -v $(pwd):/home/node/task -it jobscale/eslint npm run lint:fix
 }
 ```

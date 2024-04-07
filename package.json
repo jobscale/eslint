@@ -1,16 +1,22 @@
 {
   "name": "eslint-container",
-  "version": "1.0.0",
+  "version": "9.0.0",
   "description": "eslint on container",
+  "keywords": [
+    "eslint",
+    "eslint v9"
+  ],
   "license": "MIT",
-  "main": "app/index.js",
+  "main": "index.js",
   "scripts": {
-    "lint": "eslint . --fix",
+    "start": "node .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "npm run lint"
   },
   "dependencies": {
-    "eslint": "^8.31.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0"
+    "eslint": "^9.0.0",
+    "http-proxy-agent": "^7.0.2",
+    "https-proxy-agent": "^7.0.4"
   }
 }
