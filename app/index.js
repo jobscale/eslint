@@ -48,7 +48,7 @@ class App {
   }
 }
 
-module.exports = {
+export default {
   app: new App(),
   App,
 };
