@@ -96,7 +96,7 @@ export default {
         'arrowFunctions',
         'functions',
         'methods',
-      ]
+      ],
     }],
 
     // disallow empty destructuring patterns
@@ -237,7 +237,7 @@ export default {
         'response', // for Express responses
         '$scope', // for Angular 1 scopes
         'staticContext', // for ReactRouter context
-      ]
+      ],
     }],
 
     // disallow usage of __proto__ property
@@ -403,6 +403,6 @@ export default {
 
     // require or disallow Yoda conditions
     // https://eslint.org/docs/rules/yoda
-    yoda: 'error'
-  }
+    yoda: 'error',
+  },
 };

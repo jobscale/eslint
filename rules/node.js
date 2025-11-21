@@ -1,6 +1,6 @@
 export default {
   env: {
-    node: true
+    node: true,
   },
 
   rules: {
@@ -39,5 +39,5 @@ export default {
 
     // disallow use of synchronous methods (off by default)
     'no-sync': 'off',
-  }
+  },
 };
