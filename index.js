@@ -15,6 +15,7 @@ const rules = {
   eqeqeq: ['error', 'always'],
   'class-methods-use-this': 'off',
   'no-await-in-loop': 'off',
+  'no-confusing-arrow': 'off',
   'arrow-parens': 'off',
   'comma-dangle': ['error', 'always-multiline'],
   'quote-props': ['error', 'as-needed'],
