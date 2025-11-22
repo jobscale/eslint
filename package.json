@@ -18,12 +18,14 @@
     "lint": "eslint",
     "test": "npm run lint"
   },
-  "pre-commit": ["test"],
+  "pre-commit": [
+    "test"
+  ],
   "dependencies": {
     "eslint-plugin-import": "^2"
   },
   "devDependencies": {
     "eslint": "^9",
-    "precommit": "^1"
+    "pre-commit": "^1.2.2"
   }
 }
