@@ -21,11 +21,8 @@
   "pre-commit": [
     "test"
   ],
-  "dependencies": {
-    "eslint-plugin-import": "^2"
-  },
   "devDependencies": {
-    "eslint": "^9",
-    "pre-commit": "^1"
+    "eslint": "^9.39.1",
+    "pre-commit": "^1.2.2"
   }
 }
