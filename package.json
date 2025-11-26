@@ -1,6 +1,6 @@
 {
   "name": "@jobscale/eslint-plugin-standard",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "eslint plugin standard",
   "keywords": [
     "eslint",
@@ -21,6 +21,9 @@
   "pre-commit": [
     "test"
   ],
+  "dependencies": {
+    "eslint-plugin-import": "^2.32.0"
+  },
   "devDependencies": {
     "eslint": "^9.39.1",
     "pre-commit": "^1.2.2"
