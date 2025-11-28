@@ -59,7 +59,7 @@ const rules = {
   'import/no-duplicates': ['error'],
   'import/newline-after-import': ['error'],
   'import/no-mutable-exports': ['error'],
-  'import/extensions': ['error', 'always'],
+  'import/extensions': ['error', 'always', { ignorePackages: true }],
 };
 
 const recommended = {
