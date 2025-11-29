@@ -51,6 +51,12 @@ const rules = {
     selector: "CallExpression[callee.name='Number']",
     message: 'using to Number.parseInt, Number.parseFloat',
   }],
+  'no-extra-parens': ['error', 'all', {
+    enforceForArrowConditionals: true,
+    enforceForSequenceExpressions: true,
+    enforceForNewInMemberExpressions: true,
+  }],
+  'no-param-reassign': 'off',
 
   // --- import rule ---
   'import/named': ['error'],
