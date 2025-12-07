@@ -132,7 +132,24 @@ const node = {
     sourceType: 'module',
     globals: {
       ...globals.node,
+    },
+  },
+  rules: {
+    ...pluginJs.configs.recommended.rules,
+    ...recommended.rules,
+  },
+};
+
+const jest = {
+  ...recommended,
+  name: 'eslint-plugin-standard/jest',
+  languageOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    globals: {
+      ...globals.node,
       ...globals.jest,
+      crypto: 'off',
     },
   },
   rules: {
@@ -142,11 +159,15 @@ const node = {
 };
 
 export default {
-  rules: {},
+  rules: {
+    ...pluginJs.configs.recommended.rules,
+    ...recommended.rules,
+  },
   configs: {
     recommended,
     standard,
     browser,
     node,
+    jest,
   },
 };
