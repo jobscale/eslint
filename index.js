@@ -72,6 +72,7 @@ const rules = {
 const recommended = {
   name: 'eslint-plugin-standard/recommended',
   files: ['**/*.{js,mjs,cjs}'],
+  ignores: ['coverage/', '**/assets/', '**/*.min.js', '**/.*/'],
   languageOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
