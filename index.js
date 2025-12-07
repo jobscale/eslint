@@ -76,11 +76,6 @@ const recommended = {
   languageOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    globals: {
-      ...globals.browser,
-      ...globals.node,
-      ...globals.jest,
-    },
   },
   plugins: {
     import: importPlugin,
@@ -98,6 +93,48 @@ const recommended = {
 const standard = {
   ...recommended,
   name: 'eslint-plugin-standard/standard',
+  languageOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    globals: {
+      ...globals.browser,
+      ...globals.node,
+      ...globals.jest,
+    },
+  },
+  rules: {
+    ...pluginJs.configs.recommended.rules,
+    ...recommended.rules,
+  },
+};
+
+const browser = {
+  ...recommended,
+  name: 'eslint-plugin-standard/browser',
+  languageOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    globals: {
+      ...globals.browser,
+    },
+  },
+  rules: {
+    ...pluginJs.configs.recommended.rules,
+    ...recommended.rules,
+  },
+};
+
+const node = {
+  ...recommended,
+  name: 'eslint-plugin-standard/node',
+  languageOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    globals: {
+      ...globals.node,
+      ...globals.jest,
+    },
+  },
   rules: {
     ...pluginJs.configs.recommended.rules,
     ...recommended.rules,
@@ -109,5 +146,7 @@ export default {
   configs: {
     recommended,
     standard,
+    browser,
+    node,
   },
 };
