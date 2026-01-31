@@ -8,7 +8,10 @@ import airbnbErrors from './rules/errors.js';
 import airbnbNode from './rules/node.js';
 
 const rules = {
-  indent: ['error', 2, { MemberExpression: 0 }],
+  indent: ['error', 2, {
+    MemberExpression: 0,
+    ignoredNodes: ['ConditionalExpression'],
+  }],
   quotes: ['error', 'single', { avoidEscape: true }],
   camelcase: ['error', { properties: 'never' }],
   semi: ['error', 'always'],
