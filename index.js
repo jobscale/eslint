@@ -17,7 +17,8 @@ const rules = {
   semi: ['error', 'always'],
   eqeqeq: ['error', 'always'],
   'class-methods-use-this': 'off',
-  'arrow-parens': 'off',
+  'space-in-parens': ['error', 'never'],
+  'arrow-parens': ['error', 'always'],
   'comma-dangle': ['error', 'always-multiline'],
   'quote-props': ['error', 'as-needed'],
   'padded-blocks': ['error', 'never'],
@@ -49,7 +50,6 @@ const rules = {
   'lines-between-class-members': ['error', 'always'],
   'object-curly-spacing': ['error', 'always'],
   'space-before-blocks': ['error', 'always'],
-  'space-in-parens': ['error', 'never'],
   'space-infix-ops': ['error'],
   'spaced-comment': ['error', 'always'],
   'no-restricted-syntax': ['error', {

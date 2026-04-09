@@ -29,10 +29,10 @@ class App {
     }
     const prom = this.promiseGen();
     const fetch = { https, http };
-    fetch[protocol].get(url, instanceOptions, res => {
+    fetch[protocol].get(url, instanceOptions, (res) => {
       const { statusCode, statusMessage } = res;
       const chunked = [];
-      res.on('data', chunk => {
+      res.on('data', (chunk) => {
         chunked.push(chunk);
       });
       res.on('end', () => {
@@ -40,7 +40,7 @@ class App {
           statusCode, statusMessage, body: chunked.join(''),
         });
       });
-      res.on('error', e => {
+      res.on('error', (e) => {
         prom.reject(e);
       });
     });
