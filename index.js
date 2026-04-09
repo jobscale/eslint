@@ -18,7 +18,7 @@ const rules = {
   eqeqeq: ['error', 'always'],
   'class-methods-use-this': 'off',
   'space-in-parens': ['error', 'never'],
-  'arrow-parens': ['error', 'always'],
+  'arrow-parens': ['error', 'as-needed'],
   'comma-dangle': ['error', 'always-multiline'],
   'quote-props': ['error', 'as-needed'],
   'padded-blocks': ['error', 'never'],
