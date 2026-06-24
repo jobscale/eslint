@@ -23,7 +23,7 @@ jobs:
         grep MH /proc/cpuinfo
         free -h
         curl https://inet-ip.info/ip
-        npm i
+        npm i --legacy-peer-deps
         npm run build --if-present
         npm run lint --if-present
         npm test
