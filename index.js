@@ -1,6 +1,5 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
-import importPlugin from 'eslint-plugin-import';
 import airbnbPractices from './rules/best-practices.js';
 import airbnbStrict from './rules/strict.js';
 import airbnbEs6 from './rules/es6.js';
@@ -61,15 +60,6 @@ const rules = {
     enforceForSequenceExpressions: true,
     enforceForNewInMemberExpressions: true,
   }],
-
-  // --- import rule ---
-  'import/named': ['error'],
-  'import/default': ['error'],
-  'import/order': ['error'],
-  'import/no-duplicates': ['error'],
-  'import/newline-after-import': ['error'],
-  'import/no-mutable-exports': ['error'],
-  'import/extensions': ['error', 'always', { ignorePackages: true }],
 };
 
 const recommended = {
@@ -79,9 +69,6 @@ const recommended = {
   languageOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-  },
-  plugins: {
-    import: importPlugin,
   },
   rules: {
     ...airbnbPractices.rules,
